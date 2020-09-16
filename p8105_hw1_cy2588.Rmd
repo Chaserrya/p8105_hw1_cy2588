@@ -1,0 +1,29 @@
+---
+title: "Homework 1"
+author: Chufeng Yang
+output: github_document
+---
+
+This is my solution to HM1 and my first R code!
+
+```{r}
+library(tidyverse)
+```
+
+## Problem 1
+
+Create a data frame 
+```{r}
+p1_df=
+tibble(
+  samp = rnorm(10),
+  samp_gt_0 = samp > 0,
+  char_vec = c("a","b","c","d","e","f","g","h","i","j"),
+  factor_vec = factor(c("red","red","red","green","green","green","blue","blue","blue","blue"))
+)
+```
+
+
+
+## Problem 2
+
