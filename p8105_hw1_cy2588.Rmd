@@ -13,8 +13,9 @@ library(tidyverse)
 ## Problem 1
 
 Create a data frame 
+
 ```{r}
-p1_df=
+prob1_df =
 tibble(
   samp = rnorm(10),
   samp_gt_0 = samp > 0,
@@ -23,7 +24,31 @@ tibble(
 )
 ```
 
+Take the mean of each variable in my data frame
 
+```{r}
+mean(pull(prob1_df, samp))
+mean(pull(prob1_df, samp_gt_0))
+mean(pull(prob1_df, char_vec))
+mean(pull(prob1_df, factor_vec))
+```
+
+I can get the mean of number and logical but not character or factor.
+
+```{r}
+as.numeric(pull(prob1_df, samp))
+as.numeric(pull(prob1_df, samp_gt_0))
+as.numeric(pull(prob1_df, char_vec))
+as.numeric(pull(prob1_df, factor_vec))
+```
+
+I can convert numbers, logical values and factors to numeric but not characters.Logical values can be converted to 1 and 0, and can take a meaningful mean, but character and factor maybe cannot.
+
+```{r}
+as.numeric(pull(prob1_df, samp_gt_0))*pull(prob1_df, samp)
+as.factor(pull(prob1_df, samp_gt_0))*pull(prob1_df, samp)
+as.numeric(as.factor(pull(prob1_df, samp_gt_0)))*pull(prob1_df, samp)
+```
 
 ## Problem 2
 
