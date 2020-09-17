@@ -44,6 +44,8 @@ as.numeric(pull(prob1_df, factor_vec))
 
 I can convert numbers, logical values and factors to numeric but not characters.Logical values can be converted to 1 and 0, and can take a meaningful mean, but character and factor maybe cannot.
 
+Required operation of second code chunk.
+
 ```{r}
 as.numeric(pull(prob1_df, samp_gt_0))*pull(prob1_df, samp)
 as.factor(pull(prob1_df, samp_gt_0))*pull(prob1_df, samp)
@@ -56,14 +58,13 @@ This is problem2 about inline R code, plotting and the behavior of ggplot.
 
 ```{r}
 data("penguins", package = "palmerpenguins")
-ls.str(penguins)
 ```
 
-The dataset is about `r summary(penguins)`.  
+The dataset is about `r names(penguins)`.  
 The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns.  
 The mean flipper length is `r mean(pull(penguins,flipper_length_mm),na.rm = TRUE)`
 
-Make a scatterplot of flipper_length_mm (y) vs bill_length_mm (x), color points using species as variable.
+Make a scatterplot of flipper_length_mm (y) vs bill_length_mm (x), color points using the species variable.
 
 ```{r}
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
