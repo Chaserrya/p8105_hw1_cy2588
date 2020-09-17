@@ -52,3 +52,16 @@ as.numeric(as.factor(pull(prob1_df, samp_gt_0)))*pull(prob1_df, samp)
 
 ## Problem 2
 
+This is problem2 about inline R code, plotting and the behavior of ggplot.
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+The dataset is about `r names(penguins)`.  
+The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns.  
+The mean flipper length is `r mean(penguins,flipper_length_mm)`
+
+
+
+## finish
