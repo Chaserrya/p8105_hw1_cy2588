@@ -72,7 +72,7 @@ the levels of sex are `r levels(pull(penguins, sex))`.
 
 The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns. 
 
-The mean flipper length is `r mean(pull(penguins,flipper_length_mm),na.rm = TRUE)`.
+The mean flipper length is `r mean(pull(penguins,flipper_length_mm),na.rm = TRUE)`.  
 
 Make a scatterplot of flipper_length_mm (y) vs bill_length_mm (x), color points using the species variable.
 
