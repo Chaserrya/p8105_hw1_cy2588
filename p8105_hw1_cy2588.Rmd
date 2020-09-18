@@ -61,8 +61,17 @@ data("penguins", package = "palmerpenguins")
 ```
 
 The dataset is about `r names(penguins)`.  
-The range of bill length is `r range(pull(penguins,bill_length_mm),na.rm = TRUE)`; the range of bill depth is `r range(pull(penguins,bill_depth_mm),na.rm = TRUE)`; the range of flipper length is `r range(pull(penguins,flipper_length_mm),na.rm = TRUE)`; the range of year is `r range(pull(penguins, year), na.rm = TRUE)`; the levels of species are `r levels(pull(penguins, species))`; the levels of island are `r levels(pull(penguins, island))`; the levels of sex are `r levels(pull(penguins, sex))`.  
-The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns.  
+The range of bill length is `r range(pull(penguins,bill_length_mm),na.rm = TRUE)`;  
+the range of bill depth is `r range(pull(penguins,bill_depth_mm),na.rm = TRUE)`;  
+the range of flipper length is `r range(pull(penguins,flipper_length_mm),na.rm = TRUE)`;  
+the range of body mass is `r range(pull(penguins,body_mass_g),na.rm = TRUE)`;  
+the range of year is `r range(pull(penguins, year), na.rm = TRUE)`;  
+the levels of species are `r levels(pull(penguins, species))`;  
+the levels of island are `r levels(pull(penguins, island))`;  
+the levels of sex are `r levels(pull(penguins, sex))`.  
+
+The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns. 
+
 The mean flipper length is `r mean(pull(penguins,flipper_length_mm),na.rm = TRUE)`.
 
 Make a scatterplot of flipper_length_mm (y) vs bill_length_mm (x), color points using the species variable.
